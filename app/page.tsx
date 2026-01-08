@@ -1,6 +1,6 @@
-
 import { prisma } from '@/lib/prisma';
 import Link from 'next/link';
+import DeleteFeedButton from '@/components/DeleteFeedButton';
 
 export const dynamic = 'force-dynamic';
 
@@ -43,6 +43,7 @@ export default async function Home() {
                 >
                   Open
                 </a>
+                <DeleteFeedButton id={feed.id} />
               </div>
             </div>
           ))}

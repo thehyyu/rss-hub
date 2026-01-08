@@ -37,7 +37,8 @@ export async function GET(
             feed.item({
                 title: item.title,
                 url: item.link,
-                date: new Date(), // We might need to extract date in the future
+                description: item.content || 'No description available',
+                date: new Date(),
             });
         });
 
